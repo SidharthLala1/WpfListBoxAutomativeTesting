@@ -24,9 +24,9 @@ namespace WpfAutomationTesting
         {
             Items = new ObservableCollection<DataItem>()
             {
-                new DataItem() {Text = "1" },
-                new DataItem() {Text = "2" },
-                new DataItem() {Text = "3"}
+                new DataItem() {Text = "1", Text2 = "a" },
+                new DataItem() {Text = "2", Text2 = "b" },
+                new DataItem() {Text = "3", Text2 = "c" }
             };
 
             AddCommand = new DelegateCommand(() =>

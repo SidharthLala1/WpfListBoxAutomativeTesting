@@ -14,7 +14,11 @@
         <ListBox ItemsSource="{Binding Path=Items}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding Text}"></TextBlock>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Text}"></TextBlock>
+                        <TextBlock Text="{Binding Text2}"></TextBlock>
+                        <Button>Btn</Button>
+                    </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
