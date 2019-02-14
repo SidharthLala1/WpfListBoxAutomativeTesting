@@ -1,4 +1,5 @@
-﻿using Prism.Commands;
+﻿using Models;
+using Prism.Commands;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;

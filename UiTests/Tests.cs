@@ -34,13 +34,15 @@ namespace UiTests
 
             var btn = session.FindElementByXPath(xPathQuery);
 
-            var records1 = session.FindElementsByXPath("//ListItem/Text");
+            var simpleRecords1 = session.FindElementsByXPath("//List[@AutomationId=\"simpleListBox\"]/ListItem/Text");
+            var customRecords1 = session.FindElementsByXPath("//List[@AutomationId=\"ListBoxLog\"]/ListItem/Text");
 
             btn.Click();
 
             page = session.PageSource;
 
-            var records2 = session.FindElementsByXPath("//ListItem/Text");
+            var simpleRecords2 = session.FindElementsByXPath("//List[@AutomationId=\"simpleListBox\"]/ListItem/Text");
+            var customRecords2 = session.FindElementsByXPath("//List[@AutomationId=\"ListBoxLog\"]/ListItem/Text");
         }
 
         [ClassCleanup]

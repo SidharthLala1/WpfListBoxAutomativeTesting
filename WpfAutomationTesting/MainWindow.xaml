@@ -4,14 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfAutomationTesting"
+        xmlns:controls="clr-namespace:Controls;assembly=Controls"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <ListBox ItemsSource="{Binding Path=Items}">
+        <ListBox x:Name="simpleListBox" ItemsSource="{Binding Path=Items}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -26,5 +28,7 @@
         <StackPanel Grid.Row="1">
             <Button Command="{Binding AddCommand}">Add</Button>
         </StackPanel>
+
+        <controls:LogMessageListBox x:Name="customListBox" Grid.Row="2" LogMessages="{Binding Path=Items}"></controls:LogMessageListBox>
     </Grid>
 </Window>

@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAutomationTesting", "Wpf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UiTests", "UiTests\UiTests.csproj", "{25D3D2B3-369E-4973-B4D5-5499E6BF19EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controls", "Controls\Controls.csproj", "{185514EB-6F46-4F5D-A757-EC2127A95D2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{7C9B9652-1E6C-45A8-A31F-07BFE38756C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{25D3D2B3-369E-4973-B4D5-5499E6BF19EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25D3D2B3-369E-4973-B4D5-5499E6BF19EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25D3D2B3-369E-4973-B4D5-5499E6BF19EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{185514EB-6F46-4F5D-A757-EC2127A95D2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{185514EB-6F46-4F5D-A757-EC2127A95D2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{185514EB-6F46-4F5D-A757-EC2127A95D2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{185514EB-6F46-4F5D-A757-EC2127A95D2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C9B9652-1E6C-45A8-A31F-07BFE38756C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C9B9652-1E6C-45A8-A31F-07BFE38756C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C9B9652-1E6C-45A8-A31F-07BFE38756C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C9B9652-1E6C-45A8-A31F-07BFE38756C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
