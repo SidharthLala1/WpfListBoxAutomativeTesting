@@ -23,7 +23,7 @@ namespace UiTests
         }
 
         [TestMethod]
-        public void TestTest()
+        public void SuccessTest()
         {
             var page = session.PageSource;
 
@@ -43,10 +43,37 @@ namespace UiTests
 
             var simpleRecords2 = session.FindElementsByXPath("//List[@AutomationId=\"simpleListBox\"]/ListItem/Text");
             var customRecords2 = session.FindElementsByXPath("//List[@AutomationId=\"ListBoxLog\"]/ListItem/Text");
+
+            Assert.AreEqual(8, simpleRecords2.Count, "Wrong numer of log records");
+        }
+
+        [TestMethod]
+        public void FailedTest()
+        {
+            var page = session.PageSource;
+
+            var xPathQuery = "//Button[@Name=\"Add\"]";
+
+            WebDriverWait wait = new WebDriverWait(session, TimeSpan.FromSeconds(10));
+            wait.Until(ExpectedConditions.ElementExists(By.XPath(xPathQuery)));
+
+            var btn = session.FindElementByXPath(xPathQuery);
+
+            var simpleRecords1 = session.FindElementsByXPath("//List[@AutomationId=\"simpleListBox\"]/ListItem/Text");
+            var customRecords1 = session.FindElementsByXPath("//List[@AutomationId=\"ListBoxLog\"]/ListItem/Text");
+
+            btn.Click();
+
+            page = session.PageSource;
+
+            var simpleRecords2 = session.FindElementsByXPath("//List[@AutomationId=\"simpleListBox\"]/ListItem/Text");
+            var customRecords2 = session.FindElementsByXPath("//List[@AutomationId=\"ListBoxLog\"]/ListItem/Text");
+
+            Assert.AreEqual(4, simpleRecords2.Count, "Wrong numer of log records");
         }
 
         [ClassCleanup]
-        public static void ClassCleanup()
+        public void ClassCleanup()
         {
             session.Close();
             session.Quit();
